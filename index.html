@@ -6,7 +6,43 @@
 </head>
 <body>
     <script>
+        //1.
+        var result = '1';
+        for (let i=2; i<=100; i++) {
+            var end = true;
+            var j = 2;
+            while ((j < i/2) && (end==true)){
+                if (i % j == 0) {
+                    end = false;
+                }
+                j++;
+            }
+            if (end == true) {
+                result = result + ', '+ i;
+            }
+        };
+        console.log(result);
         
+        //2.
+        var prices = [3,5,10,15];
+        function countBasketPrice (arr) {
+            var result = 0;
+            for (let i=0; i<arr.length; i++){
+                result = result + arr[i];
+            };
+            return result;
+        }
+        console.log(countBasketPrice(prices));
+        
+        //3.
+        for (let i=0; i<10; console.log(i++)) { };
+        
+        //4.
+        var string = '';
+        for (let i=0; i<20; i++) {
+            string = string + 'x';
+            console.log(string);
+        };
     </script>
 </body>
 </html>
